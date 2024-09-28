@@ -74,6 +74,7 @@ address {
 /* #endregion  */
 
 /* #region Common */
+
 .section {
     padding: 120px 0;
 
@@ -85,6 +86,17 @@ address {
     margin: 0 auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .benefits-title,
 .portfolio-title,
 .team-title {
@@ -94,7 +106,7 @@ address {
 .logo {
     color: #4D5AE5;
     line-height: 1.17;
-
+    margin-right: 76px
 }
 
 .logo-dark {
@@ -123,6 +135,7 @@ address {
 /* #region Header */
 .header {
     background-color: #ffffff;
+    border-bottom: 1px solid #e7e9fc
 }
 
 .header-container {
@@ -230,13 +243,13 @@ address {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    width: 496px;
+    max-width: 496px;
 
 
 }
 
 .btn-accent {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     background-color: #4d5ae5;
@@ -276,7 +289,13 @@ address {
 
 .benefits-list {
     --items: 4;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 
+    padding: 0;
+    margin: 0;
+    gap: var(--indent-col);
 
 }
 
@@ -289,7 +308,7 @@ address {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 
 }
 
@@ -325,15 +344,26 @@ address {
 
 .team-list {
     --items: 4;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--indent-col);
 
 }
 
 .team-item {
     border-radius: 0 0 4px 4px;
     background-color: #FFFFFF;
-    padding-bottom: 32px;
+
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 
+
+}
+
+.team-frame {
+    padding: 32px 0;
 
 }
 
@@ -345,8 +375,8 @@ address {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
-    padding-top: 32px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
+
 }
 
 .team-desc {
@@ -357,6 +387,7 @@ address {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
+    text-align: center;
 }
 
 /* #endregion  */
@@ -423,12 +454,14 @@ address {
 }
 
 .footer-logo {
+    display: inline-block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .logo-light {
